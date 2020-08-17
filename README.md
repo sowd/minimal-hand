@@ -2,7 +2,7 @@
 
 This is a slightly-modified version of [minimal-hand](https://github.com/CalciferZh/minimal-hand) repository.
 
-+ Accepts omvie file rather than webcam input.
++ Accepts movie file rather than webcam input.
 + Outputs csv file.
 + Disables opening windows by default.
 
