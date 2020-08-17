@@ -80,4 +80,4 @@ class HandMesh():
     self.verts = np.stack(self.verts, 1)
     self.verts = np.sum(self.verts * self.weights, 1)
 
-    return self.verts.copy(),joint.xyz
+    return self.verts.copy(),joint_xyz
