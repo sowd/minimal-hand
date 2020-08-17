@@ -92,7 +92,7 @@ def live_application():
   try:
    while cap.isOpened():  # True
     ret_val, inimg = cap.read()
-    if not ret_val: continue
+    if not ret_val: break
     frameNo=frameNo+1
     if frameNo==MAX_FRAMES : break
 
