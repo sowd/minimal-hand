@@ -5,6 +5,8 @@ This is a slightly-modified version of [minimal-hand](https://github.com/Calcife
 + Accepts movie file rather than webcam input.
 + Outputs csv file.
 + Disables opening windows by default.
++ Removed empty model/ dir to be symbolic linked to pre-loaded dir
++ Bugfix in hand_mesh.py (set_abs_quat() returns joint_xyz as well)
 
 Original README below.
 <hr />
