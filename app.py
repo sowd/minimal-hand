@@ -83,9 +83,12 @@ def live_application():
 
   # Video read
   cap = cv2.VideoCapture(INPUT_MOVIE_FILE)
+  totalFrameNum = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+
   fout = open(OUTPUT_CSV_FILE,mode='w')
   frameNo=0
 
+  print('Start processing.')
   try:
    while cap.isOpened():  # True
     ret_val, inimg = cap.read()
@@ -119,7 +122,7 @@ def live_application():
     line = ','.join( list(map(lambda x: '%f,%f,%f' %(x[0],x[1],x[2]),joint_xyz)) )
     fout.write(line+"\n")
     if frameNo%50 == 0 :
-      print(frameNo, " frames processed.")
+      print("\r %d/%d frames processed." % (frameNo,totalFrameNum) ,end='')
 
     if not bVisualize: continue
 
@@ -154,6 +157,7 @@ def live_application():
     print('Ctrl-c catched')
 
   fout.close()
+  print("Completed.")
 
 if __name__ == '__main__':
 
