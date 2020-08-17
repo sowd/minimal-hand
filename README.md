@@ -1,4 +1,14 @@
-# Minimal Hand
+# Minimal Hand Modified
+
+This is a slightly-modified version of [minimal-hand](https://github.com/CalciferZh/minimal-hand) repository.
+
++ Accepts omvie file rather than webcam input.
++ Outputs csv file.
++ Disables opening windows by default.
+
+Original README below.
+<hr />
+
 
 A minimal solution to hand motion capture from a single color camera at over 100fps.
 Easy to use, plug to run.
